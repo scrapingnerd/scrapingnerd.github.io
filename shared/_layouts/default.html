@@ -1,21 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  {% feed_meta %}
 </head>
 <body>
-  <header>
-    <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
-  </header>
-  <main>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="{{ "/" | relative_url }}" class="nav-brand">
+        <span class="brand-icon">⚡</span>
+        {{ site.title }}
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        <li><a href="{{ "/" | relative_url }}#tutorials">Tutorials</a></li>
+        <li><a href="{{ "/" | relative_url }}#apis">APIs</a></li>
+        <li>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero (homepage only) -->
+  {% if page.layout == 'default' and page.url == '/' %}
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🔧 {{ site.tagline | default: "No-Code Web Scraping" }}</div>
+      <h1>
+        {{ site.hero_title | default: "Master Data Extraction" }}
+        <span class="gradient-text">{{ site.hero_highlight | default: "Without Writing Code" }}</span>
+      </h1>
+      <p>{{ site.description }}</p>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Main Content -->
+  <main class="site-main">
     {{ content }}
   </main>
-  <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>⚡ {{ site.title }}</h3>
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="footer-section">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="#">TikTok Scraping</a></li>
+          <li><a href="#">X.com Data</a></li>
+          <li><a href="#">API Guides</a></li>
+          <li><a href="#">No-Code Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ "/feed.xml" | relative_url }}">RSS Feed</a></li>
+          <li><a href="{{ "/sitemap.xml" | relative_url }}">Sitemap</a></li>
+          {% if site.github_username %}
+          <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">Twitter</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Built by <strong>Novi Develop</strong>.</p>
+    </div>
   </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '🌙' : '☀️';
+    }
+    // Restore saved theme
+    (function() {
+      const saved = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+      const btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = saved === 'dark' ? '🌙' : '☀️';
+    })();
+  </script>
 </body>
 </html>

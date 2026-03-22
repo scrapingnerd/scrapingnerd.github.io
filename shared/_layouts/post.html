@@ -1,12 +1,57 @@
 ---
 layout: default
 ---
-<article>
-  <header>
+<div class="article-container">
+  <header class="article-header">
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
     <h1>{{ page.title }}</h1>
-    <p>Published on {{ page.date | date: "%B %-d, %Y" }}</p>
+    <div class="article-meta">
+      <span class="meta-item">
+        📅 {{ page.date | date: "%B %-d, %Y" }}
+      </span>
+      {% if page.author %}
+      <span class="meta-item">
+        ✍️ {{ page.author }}
+      </span>
+      {% endif %}
+      {% if page.read_time %}
+      <span class="meta-item">
+        ⏱️ {{ page.read_time }} min read
+      </span>
+      {% else %}
+      <span class="meta-item">
+        ⏱️ {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+      </span>
+      {% endif %}
+    </div>
   </header>
-  <div class="content">
+
+  <div class="article-content">
     {{ content }}
   </div>
-</article>
+
+  <footer class="article-footer">
+    <a href="{{ "/" | relative_url }}" class="back-link">← Back to all posts</a>
+
+    {% if site.posts.size > 1 %}
+    <div class="related-posts">
+      <h3>More Articles</h3>
+      <div class="related-grid">
+        {% assign related = site.posts | where_exp: "post", "post.url != page.url" %}
+        {% for post in related limit:3 %}
+        <div class="related-card">
+          <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+          <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </footer>
+</div>

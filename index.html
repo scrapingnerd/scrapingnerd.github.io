@@ -2,17 +2,57 @@
 layout: default
 ---
 
-<div class="home">
-  <h2>Recent Posts</h2>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+{% assign posts = site.posts %}
+
+{% if posts.size > 0 %}
+
+  <!-- Featured Post (latest) -->
+  {% assign featured = posts.first %}
+  <div class="featured-post">
+    <span class="featured-label">⭐ Latest</span>
+    <h2><a href="{{ featured.url | relative_url }}">{{ featured.title | escape }}</a></h2>
+    <p class="excerpt">{{ featured.excerpt | strip_html | truncatewords: 40 }}</p>
+    <div class="featured-meta">
+      <span>📅 {{ featured.date | date: "%B %-d, %Y" }}</span>
+      <span>✍️ {{ featured.author | default: site.author }}</span>
+      <span>⏱️ {{ featured.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+    </div>
+  </div>
+
+  <!-- All Posts Grid -->
+  <div class="section-header" id="tutorials">
+    <h2>All Articles</h2>
+  </div>
+
+  <div class="post-grid">
+    {% for post in posts %}
+    <article class="post-card">
+      <div class="post-card-thumbnail">📄</div>
+      <div class="post-card-body">
+        {% if post.tags and post.tags.size > 0 %}
+        <div class="post-card-tags">
+          {% for tag in post.tags limit:3 %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <h3 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h3>
-        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-      </li>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <div class="post-card-meta">
+          <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="read-time">⏱️ {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min</span>
+        </div>
+      </div>
+    </article>
     {% endfor %}
-  </ul>
-</div>
+  </div>
+
+{% else %}
+  <div class="empty-state">
+    <div class="emoji">📝</div>
+    <h3>No posts yet</h3>
+    <p>Check back soon for tutorials on web scraping APIs and data extraction techniques.</p>
+  </div>
+{% endif %}
