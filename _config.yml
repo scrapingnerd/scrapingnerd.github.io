@@ -11,6 +11,7 @@ github_username: scrapingnerd
 author: Novi Develop
 
 # Custom variables
+timezone: Asia/Ho_Chi_Minh
 tagline: "Advanced Data Extraction"
 hero_title: "Web Scraping Mastery "
 hero_highlight: "For Everyone"
