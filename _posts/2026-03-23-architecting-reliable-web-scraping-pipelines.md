@@ -90,5 +90,5 @@ def normalize_price_to_cents(raw_string: str) -> int:
 * **MongoDB/JSONB:** Use document stores or Postgres JSONB columns if extracting highly variable metadata (e.g., differing spec sheets across e-commerce categories).
 
 ### 2. Pipeline Orchestration
-* **Scheduling:** While Linux `cron` is fine for side projects, production requires tools like **Apache Airflow** or **Prefect** to manage run DAGs, retries, and backfills.
+* **Scheduling:** While Linux `cron` is fine for side projects, production requires tools like **Apache Airflow** or **Prefect** to manage run DAGs, retries, and backfills. For a fully managed experience, explore our collection of pre-built [scraping tools](/tools/) that handle scheduling, proxy rotation, and evasion automatically.
 * **Alerting:** Implement a threshold check post-insertion. If `new_price < threshold`, dispatch an asynchronous event to a **Slack Webhook** or email service (SendGrid/AWS SES) to alert stakeholders.

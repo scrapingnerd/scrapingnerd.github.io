@@ -39,4 +39,5 @@ Having a perfect fingerprint means nothing if your bot moves like a bot.
 * **Variable Latency:** Never fire requests or actions at exact intervals. Implement a **Gaussian distribution** for delays (e.g., `time.sleep(random.gauss(5, 1))`).
 * **Input Dynamics:** When interacting with forms, introduce realistic and varying delays between `keydown` and `keyup` events.
 
-Mastering these core components—network-level masking, deep environment stealth, and behavioral emulation—is the baseline requirement for maintaining a successful data extraction pipeline against modern WAFs.
+Mastering these core components—network-level masking, deep environment stealth, and behavioral emulation—is the baseline requirement for maintaining a successful data extraction pipeline against modern WAFs. If you'd prefer to skip the complexity of building this stack yourself, our [pre-built scraping tools](/tools/) already incorporate these evasion techniques for platforms like TikTok and X.com.
+

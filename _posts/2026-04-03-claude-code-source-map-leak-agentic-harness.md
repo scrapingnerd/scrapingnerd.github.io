@@ -35,4 +35,4 @@ The codebase manages a fleet of over **40 specialized tools**, showing advanced 
 * **PostgreSQL Adapters:** For direct schema introspection and data migration.
 * **LSP (Language Server Protocol) Clients:** Enabling Claude to "understand" symbol definitions and references across a workspace without reading every file into the context window.
 
-This look into Anthropic’s secret sauce changes how developers understand LLM tooling—proving that building autonomous AI requires incredibly deep, classical engineering infrastructure alongside the prompts.
+This look into Anthropic’s secret sauce changes how developers understand LLM tooling—proving that building autonomous AI requires incredibly deep, classical engineering infrastructure alongside the prompts. The same principle applies to data extraction: reliable [scraping tools](/tools/) rely on robust orchestration, proxy management, and anti-detection layers that go far beyond simple HTTP requests.

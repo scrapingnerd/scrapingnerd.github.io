@@ -120,6 +120,8 @@ This structural normalization guarantees that vertical TikTok codecs are padded 
 
 In [Part 4: OAuth2 authentication and YouTube Data API uploads](/tiktok/tiktok-youtube-part4-scheduling-publishing/), we discuss orchestrating the final stage via the `google-api-python-client`.
 
+> **Need more TikTok data inputs?** You can also feed this pipeline with trending videos, hashtag data, or user profiles. See our full collection of [TikTok and Twitter scraping tools](/tools/) for additional ingestion sources.
+
 > **Series Navigation**
 > - [Part 1: Interfacing with the Apify Python SDK](/tiktok/tiktok-youtube-part1-searching-api/)
 > - [Part 2: Asynchronous video ingestion and connection pooling](/tiktok/tiktok-youtube-part2-downloading-videos/)
