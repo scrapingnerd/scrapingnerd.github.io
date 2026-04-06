@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Architecture (Part 1): The Automation Infrastructure"
-date: 2026-04-06
+date: 2026-04-06 10:00:00 +0700
 permalink: /automation/automation-infrastructure-claude-code/
 tags: [Automation, Tool Execution, Parsing, Integration]
 author: Scraping Nerd

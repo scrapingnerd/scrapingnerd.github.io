@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Architecture (Part 3): Automated Context Compaction for Data Ops"
-date: 2026-04-06
+date: 2026-04-06 12:00:00 +0700
 permalink: /automation/automated-context-compaction-data-ops/
 tags: [Memory State, LLM Tuning, Data Operations, Backend Engineering]
 author: Scraping Nerd

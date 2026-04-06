@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Architecture (Part 2): Deep Dive into Agentic Search (GrepTool)"
-date: 2026-04-06
+date: 2026-04-06 11:00:00 +0700
 permalink: /automation/agentic-search-ripgrep-deep-dive/
 tags: [Ripgrep, Search Engine, Scalable Automation, Data Parsing]
 author: Scraping Nerd
