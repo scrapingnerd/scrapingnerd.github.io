@@ -22,7 +22,7 @@ TikTok's security perimeter relies on deterministic signals to flag automated tr
 2. **TLS Fingerprinting (JA3):** Standard Python OpenSSL bindings generate a TLS signature that is instantly recognizable as a bot. You need real-browser TLS signatures that match your forged `User-Agent`.
 3. **Canvas Fingerprinting:** The platform computes hardware hashes based on how your GPU renders sub-pixels.
 
-To circumvent this, you must abstract the extraction layer. Utilizing managed infrastructure—like the `novi/tiktok-scraper-ultimate` Actor on Apify—allows you to offload proxy rotation, residential IP pooling, and TLS handshake spoofing.
+To circumvent this, you must abstract the extraction layer. Utilizing managed infrastructure—like the **[TikTok Scraper Ultimate](https://apify.com/novi/tiktok-scraper-ultimate?fpr=7hce1m)** Actor on Apify—allows you to offload proxy rotation, residential IP pooling, and TLS handshake spoofing.
 
 ## Pipeline Orchestration & Fault Tolerance
 
