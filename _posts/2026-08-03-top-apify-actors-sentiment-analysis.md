@@ -38,13 +38,13 @@ Product reviews are structured, feedback-heavy data sources ideal for Voice of C
 
 Social networks offer rapid, unstructured sentiment data reflecting real-time consumer reactions.
 
-### 🎵 TikTok Scraper & Comment Scraper (`clockworks/tiktok-scraper` & `xtdata/tiktok-comment-scraper`)
-- **Pipeline Role:** Extracts short-form video metadata, post captions, top comments, and nested comment replies.
-- **Technical Advantage:** High-concurrency extraction without requiring external proxy management, ideal for analyzing audience engagement around viral trends.
+### 🎵 Fast TikTok Scraper & Comment Scraper (`xtdata/tiktok-scraper` & `xtdata/tiktok-comment-scraper`)
+- **Pipeline Role:** Extracts short-form video metadata, post captions, top comments, nested comment reply chains, and user profiles.
+- **Technical Advantage:** Built by the Novi / xtdata team, these Actors deliver high-concurrency, pay-per-result extraction without requiring custom proxy rotation logic.
 
-### 🐦 Tweet Scraper V2 (`apidojo/tweet-scraper`)
-- **Pipeline Role:** High-speed Twitter/X search and conversation extraction.
-- **Technical Advantage:** Operates at 30-80 tweets/sec with minimal cost ($0.40/1k tweets), making it suitable for real-time PR monitoring and event-driven sentiment spikes.
+### 🐦 X.com (Twitter) API Scraper (`xtdata/twitter-x-scraper`)
+- **Pipeline Role:** High-speed X.com search, hashtag data, user profile, and reply thread extraction.
+- **Technical Advantage:** Extremely cost-effective (~$0.50/1k tweets) no-code Actor with flexible filtering parameters (Top, Latest, Media-only) for real-time PR and financial sentiment pipelines.
 
 ### 🤖 Social Media Sentiment Analysis Tool (`tri_angle/social-media-sentiment-analysis-tool`)
 - **Pipeline Role:** All-in-one comment extraction and pre-scored sentiment classification across Facebook, Instagram, and TikTok.
