@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Architecting Sentiment Analysis Pipelines with Top Apify Scrapers & AI Actors"
-date: 2026-08-03 10:00:00 +0700
+date: 2026-08-02 10:00:00 +0700
 permalink: /sentiment-analysis/architecting-sentiment-analysis-apify-actors/
 tags: [Apify, Web Scraping, Sentiment Analysis, Architecture, Data Pipeline]
 author: scrapingnerd
