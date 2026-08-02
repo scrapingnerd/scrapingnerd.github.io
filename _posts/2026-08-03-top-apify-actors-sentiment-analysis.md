@@ -12,7 +12,7 @@ description: "A technical evaluation of Apify's Sentiment Analysis Actors, cover
 
 A robust sentiment analysis pipeline requires high-volume, reliable data ingestion. Whether you are building an automated customer sentiment dashboard or training custom LLM classifiers, picking the right data extraction layer is a critical decision.
 
-The [Apify Platform](https://apify.com/use-cases/sentiment-analysis) hosts an extensive catalog of cloud-hosted web scrapers (**Actors**). In this technical breakdown, we review the top Apify Actors suited for sentiment analysis pipelines across e-commerce reviews, social networks, and web content.
+The [Apify Platform](https://apify.com/use-cases/sentiment-analysis?fpr=7hce1m) hosts an extensive catalog of cloud-hosted web scrapers (**Actors**). In this technical breakdown, we review the top Apify Actors suited for sentiment analysis pipelines across e-commerce reviews, social networks, and web content.
 
 ---
 
@@ -20,17 +20,17 @@ The [Apify Platform](https://apify.com/use-cases/sentiment-analysis) hosts an ex
 
 Product reviews are structured, feedback-heavy data sources ideal for Voice of Customer (VoC) tracking.
 
-### 📍 Google Maps Reviews Scraper (`compass/google-maps-reviews-scraper`)
+### 📍 Google Maps Reviews Scraper ([`compass/google-maps-reviews-scraper`](https://apify.com/compass/google-maps-reviews-scraper?fpr=7hce1m))
 - **Pipeline Role:** Extracts location-specific reviews, star ratings, timestamps, and owner responses.
 - **Integration Highlight:** Can be scheduled via API to push new review items into PostgreSQL or Snowflake for automated sentiment drift monitoring.
 
-### 🛒 Amazon Reviews Scraper (`junglee/amazon-reviews-scraper`)
+### 🛒 Amazon Reviews Scraper ([`junglee/amazon-reviews-scraper`](https://apify.com/junglee/amazon-reviews-scraper?fpr=7hce1m))
 - **Pipeline Role:** Scrapes product-level reviews, verified purchase tags, helpful votes, and review media.
 - **Integration Highlight:** Enables competitive sentiment benchmark analysis by aggregating reviews across competing ASINs.
 
 ### 🏨 Facebook & Booking.com Review Scrapers
-- **Facebook Reviews Scraper (`apify/facebook-reviews-scraper`):** Collects public page feedback.
-- **Booking Reviews Scraper (`voyager/booking-reviews-scraper`):** Captures guest feedback split into positive ("Liked") and negative ("Disliked") sections.
+- **Facebook Reviews Scraper ([`apify/facebook-reviews-scraper`](https://apify.com/apify/facebook-reviews-scraper?fpr=7hce1m)):** Collects public page feedback.
+- **Booking Reviews Scraper ([`voyager/booking-reviews-scraper`](https://apify.com/voyager/booking-reviews-scraper?fpr=7hce1m)):** Captures guest feedback split into positive ("Liked") and negative ("Disliked") sections.
 
 ---
 
@@ -38,15 +38,15 @@ Product reviews are structured, feedback-heavy data sources ideal for Voice of C
 
 Social networks offer rapid, unstructured sentiment data reflecting real-time consumer reactions.
 
-### 🎵 Fast TikTok Scraper & Comment Scraper (`xtdata/tiktok-scraper` & `xtdata/tiktok-comment-scraper`)
+### 🎵 Fast TikTok Scraper & Comment Scraper ([`xtdata/tiktok-scraper`](https://apify.com/xtdata/tiktok-scraper?fpr=7hce1m) & [`xtdata/tiktok-comment-scraper`](https://apify.com/xtdata/tiktok-comment-scraper?fpr=7hce1m))
 - **Pipeline Role:** Extracts short-form video metadata, post captions, top comments, nested comment reply chains, and user profiles.
 - **Technical Advantage:** Built by the Novi / xtdata team, these Actors deliver high-concurrency, pay-per-result extraction without requiring custom proxy rotation logic.
 
-### 🐦 X.com (Twitter) API Scraper (`xtdata/twitter-x-scraper`)
+### 🐦 X.com (Twitter) API Scraper ([`xtdata/twitter-x-scraper`](https://apify.com/xtdata/twitter-x-scraper?fpr=7hce1m))
 - **Pipeline Role:** High-speed X.com search, hashtag data, user profile, and reply thread extraction.
 - **Technical Advantage:** Extremely cost-effective (~$0.50/1k tweets) no-code Actor with flexible filtering parameters (Top, Latest, Media-only) for real-time PR and financial sentiment pipelines.
 
-### 🤖 Social Media Sentiment Analysis Tool (`tri_angle/social-media-sentiment-analysis-tool`)
+### 🤖 Social Media Sentiment Analysis Tool ([`tri_angle/social-media-sentiment-analysis-tool`](https://apify.com/tri_angle/social-media-sentiment-analysis-tool?fpr=7hce1m))
 - **Pipeline Role:** All-in-one comment extraction and pre-scored sentiment classification across Facebook, Instagram, and TikTok.
 
 ---
@@ -55,9 +55,9 @@ Social networks offer rapid, unstructured sentiment data reflecting real-time co
 
 When converting raw web pages into vectors or running NLP topic modeling:
 
-- **Website Content Crawler (`apify/website-content-crawler`):** Crawls target domains and outputs clean Markdown formatted for LangChain, LlamaIndex, or OpenAI sentiment analysis pipelines.
-- **AI Text Analyzer for Google Reviews (`geneea-analytics/reviews-text-nlp-analyzer`):** Uses NLP to extract key sentiment themes (staff, pricing, quality) directly from Google Maps review datasets.
-- **Sentiment Analysis Online Tool (`tri_angle/sentiment-analysis-online-tool`):** A lightweight AI Actor that scores arbitrary text inputs on a 0 to 1 sentiment scale.
+- **Website Content Crawler ([`apify/website-content-crawler`](https://apify.com/apify/website-content-crawler?fpr=7hce1m)):** Crawls target domains and outputs clean Markdown formatted for LangChain, LlamaIndex, or OpenAI sentiment analysis pipelines.
+- **AI Text Analyzer for Google Reviews ([`geneea-analytics/reviews-text-nlp-analyzer`](https://apify.com/geneea-analytics/reviews-text-nlp-analyzer?fpr=7hce1m)):** Uses NLP to extract key sentiment themes (staff, pricing, quality) directly from Google Maps review datasets.
+- **Sentiment Analysis Online Tool ([`tri_angle/sentiment-analysis-online-tool`](https://apify.com/tri_angle/sentiment-analysis-online-tool?fpr=7hce1m)):** A lightweight AI Actor that scores arbitrary text inputs on a 0 to 1 sentiment scale.
 
 ---
 
