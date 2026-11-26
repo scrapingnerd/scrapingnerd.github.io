@@ -4,25 +4,33 @@ title: Scraping Tools
 permalink: /tools/
 ---
 
-# Scraping Tools
+# Data Extraction & Scraping Tools
 
-If you want to get specific data from TikTok or Twitter (X.com), you can use the scrapers below. Each tool is designed to help you efficiently extract different kinds of data, like hashtags, search results, profiles, or video downloads.
+Curated Apify Actors for high-throughput **TikTok**, **X (Twitter)**, and **YouTube** data collection — supporting JSON/CSV exports, REST APIs, Standby real-time endpoints, and AI/RAG pipelines.
 
-### TikTok Scrapers & APIs
+### TikTok Data Pipelines
 
-* [🎹️ Fast TikTok API](https://apify.com/novi/fast-tiktok-api?fpr=7hce1m) - Best for general video downloads and data extraction.
-* [📹️ TikTok Trend API](https://apify.com/novi/tiktok-trend-api?fpr=7hce1m) - Discover what's currently trending on TikTok.
-* [🔍️ TikTok Search API](https://apify.com/novi/tiktok-search-api?fpr=7hce1m) - Perform targeted searches for keywords.
-* [🧛️ TikTok User API](https://apify.com/novi/tiktok-user-api?fpr=7hce1m) & [🧛️ TikTok User Info API](https://apify.com/novi/tiktok-user-info-api?fpr=7hce1m) - Detailed profile and user data.
-* [#️ TikTok Hashtag API](https://apify.com/novi/tiktok-hashtag-api?fpr=7hce1m) - Retrieve videos and stats by hashtag.
-* [🛍️ TikTok Shop API](https://apify.com/novi/tiktok-shop-scraper?fpr=7hce1m) - Market research and product data on TikTok Shop.
-* [👤️ TikTok Followers API](https://apify.com/novi/tiktok-followers-api?fpr=7hce1m) - Analyze follower metrics.
-* [⚡️ TikTok Scraper (pay-per-result)](https://apify.com/xtdata/tiktok-scraper?fpr=7hce1m) - Flexible billing for scraping jobs.
-* [💬 TikTok Comment API](https://apify.com/novi/tiktok-comment-api?fpr=7hce1m) - Extract insights from video comments.
-* [🎶 TikTok Music API](https://apify.com/novi/tiktok-sound-api?fpr=7hce1m) & [🎶 TikTok Music Trend API](https://apify.com/novi/tiktok-music-trend-api?fpr=7hce1m) - Analyze audio tracks and trending sounds.
+* [🚀 Ultimate TikTok Scraper](https://apify.com/novi/tiktok-scraper-ultimate?fpr=7hce1m) — Multi-source TikTok pipeline (profiles, hashtags, search, videos, transcripts, comments) with clean/AI schemas and Standby mode.
+* [🔎 Advanced Search TikTok API](https://apify.com/novi/advanced-search-tiktok-api?fpr=7hce1m) — Filtered keyword search by region, publish window, and sort order with Standby API access.
+* [🎹 Fast TikTok API](https://apify.com/novi/fast-tiktok-api?fpr=7hce1m) & [⚡ TikTok Scraper (xtdata)](https://apify.com/xtdata/tiktok-scraper?fpr=7hce1m) — High-volume TikTok video extraction without proxy overhead.
+* [🎬 TikTok Profile Videos API](https://apify.com/novi/tiktok-user-api?fpr=7hce1m) — Paginated profile feed extraction (Standby API ready).
+* [👤 TikTok User Info API](https://apify.com/novi/tiktok-user-info-api?fpr=7hce1m) & [TikTok Profile Scraper](https://apify.com/xtdata/tiktok-user-information-scraper?fpr=7hce1m) — Batch profile enrichment (followers, likes, bio links, cross-platform handles).
+* [🧭 TikTok User Search Scraper](https://apify.com/novi/tiktok-user-search?fpr=7hce1m) — Structured creator discovery with follower-range and region filters.
+* [💬 TikTok Comment (Replies) Scraper](https://apify.com/xtdata/tiktok-comment-scraper?fpr=7hce1m) & [TikTok Comment API](https://apify.com/novi/tiktok-comment-api?fpr=7hce1m) — Comment and reply datasets for NLP and sentiment analysis.
+* [#️⃣ Multiple TikTok Hashtags Scraper](https://apify.com/novi/multiple-tiktok-hashtag-scraper?fpr=7hce1m) & [TikTok Hashtag API](https://apify.com/novi/tiktok-hashtag-api?fpr=7hce1m) — Bulk hashtag dataset collection.
+* [📈 TikTok Trend API](https://apify.com/novi/tiktok-trend-api?fpr=7hce1m), [🤖 TikTok AI Video Scraper](https://apify.com/novi/tiktok-ai-video-scraper?fpr=7hce1m), & [📍 TikTok Location API](https://apify.com/novi/tiktok-location-api?fpr=7hce1m) — Specialized trend, AI-video, and geo-tagged datasets.
+* [🛍️ TikTok Shop Scraper](https://apify.com/novi/tiktok-shop-scraper?fpr=7hce1m) & [👥 TikTok Followers API](https://apify.com/novi/tiktok-followers-api?fpr=7hce1m) — SEA e-commerce listings and follower graph exports.
+* [🎶 TikTok Sound API](https://apify.com/novi/tiktok-sound-api?fpr=7hce1m) & [TikTok Music Trend API](https://apify.com/novi/tiktok-music-trend-api?fpr=7hce1m) — Audio-level video indexing and viral sound analytics.
 
-### Twitter / X.com Scrapers
+### Twitter / X.com Data Pipelines
 
-* [🐦 Twitter - X.com Scraper](https://apify.com/xtdata/twitter-x-scraper?fpr=7hce1m) - No-code solution to extract historical Tweets, users, and conversations.
+* [🐦 X.com Twitter API Scraper](https://apify.com/xtdata/twitter-x-scraper?fpr=7hce1m) — Full-featured X search, profile, list, and reply extraction without enterprise API pricing.
+* [📋 Twitter Followers & Following Scraper](https://apify.com/xtdata/twitter-x-followers-following-scraper?fpr=7hce1m) — Filtered follower/following graph extraction with bio email and website enrichment.
+* [🕒 Twitter User Tweets Scraper](https://apify.com/xtdata/twitter-x-user-tweets-scraper?fpr=7hce1m) — Historical timelines plus incremental monitoring mode for scheduled pipelines.
+* [🔍 Twitter User Search Scraper](https://apify.com/xtdata/twitter-x-user-search-scraper?fpr=7hce1m) & [Twitter User Info Scraper](https://apify.com/xtdata/twitter-x-user-info-scraper?fpr=7hce1m) — Account discovery, profile enrichment, retweeters, and likers.
 
-Need a custom solution or not sure which tool to use? Check out our [tutorials]({{ '/' | relative_url }}) or [contact us](https://novidevelop.github.io/about/).
+### YouTube Data Pipelines
+
+* [▶️ YouTube Transcript API](https://apify.com/novi/youtube-transcript-api?fpr=7hce1m) — Timestamped captions and video metadata formatted for LLM ingestion and RAG indexing.
+
+Check out our [technical guides]({{ '/' | relative_url }}) or [reach out](https://novidevelop.github.io/about/) for custom pipelines.
