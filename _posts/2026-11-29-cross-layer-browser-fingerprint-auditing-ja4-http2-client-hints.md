@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cross-Layer Browser Fingerprint Auditing: JA3 Instability, JA4 Baselines, and Drift vs. Contradiction"
-date: 2026-11-29 08:45:00 +0700
+date: 2026-11-29 02:25:00 +0700
 permalink: /data-engineering/cross-layer-browser-fingerprint-auditing-ja4-http2-client-hints/
 categories: [Data Engineering, Web Scraping, Analysis]
 tags: [Browser Fingerprinting, JA4, JA3, HTTP/2, Client Hints, Playwright, Python, Apify]
