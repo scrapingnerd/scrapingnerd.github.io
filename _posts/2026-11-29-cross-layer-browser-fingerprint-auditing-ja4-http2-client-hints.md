@@ -14,7 +14,7 @@ Single-layer fingerprint checks produce misleading confidence. A script can veri
 Conversely, naive hash equality checks break constantly in CI. Comparing raw `ja3_hash` digests or unnormalized `navigator.platform` strings across runs triggers false alerts even on an unmodified browser. Treating fingerprint verification as a cross-layer consistency problem, with separate severity levels for contradiction (`WARN`) versus environmental drift (`INFO`), solves both problems.
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:1.5em 0;">
-  <iframe src="https://www.youtube-nocookie.com/embed/MvDuRhZymA8?rel=0" title="Browser Fingerprint Consistency: Audit TLS, HTTP/2 and JS Signals with Playwright" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
+  <iframe src="https://www.youtube.com/embed/MvDuRhZymA8?rel=0" title="Browser Fingerprint Consistency: Audit TLS, HTTP/2 and JS Signals with Playwright" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
 </div>
 
 ## Why JA3 rotates while JA4 and HTTP/2 stay anchored
